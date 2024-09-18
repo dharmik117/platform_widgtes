@@ -1,6 +1,6 @@
 name: cross_platform_widgets
-description: "Package that can use platform specific widgets."
-version: 0.1.2
+description: "Package that can use platform specific widgets.Consistent User Experience: By automatically adapting to the platform's design guidelines, platform_widgets helps you deliver a more cohesive and familiar user experience across devices."
+version: 0.1.3
 homepage: https://github.com/dharmik117/platform_widgtes
 
 environment:

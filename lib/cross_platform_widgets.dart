@@ -1,4 +1,4 @@
-library platform_widgets;
+library cross_platform_widgets;
 
 export 'src/platform_button.dart';
 export 'src/platform_checkbox.dart';

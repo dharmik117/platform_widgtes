@@ -51,11 +51,15 @@ class PlatformButton extends StatelessWidget {
         onPressed: onPressed,
         style: style ??
             ElevatedButton.styleFrom(
-              foregroundColor: textColor ?? Theme.of(context).colorScheme.onPrimary, backgroundColor: color ?? Theme.of(context).primaryColor, padding: padding,
+              foregroundColor:
+                  textColor ?? Theme.of(context).colorScheme.onPrimary,
+              backgroundColor: color ?? Theme.of(context).primaryColor,
+              padding: padding,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(borderRadius ?? 8.0),
               ),
-              tapTargetSize: materialTapTargetSize ?? MaterialTapTargetSize.padded,
+              tapTargetSize:
+                  materialTapTargetSize ?? MaterialTapTargetSize.padded,
             ),
         child: child,
       );

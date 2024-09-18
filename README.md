@@ -16,33 +16,144 @@ A Flutter package for adaptive UI components.
 
 
 
-## Features
+## Intoduction
 
-1. Install the package: Add the following line to your pubspec.yaml file:
-dependencies:  platform_widgets: ^0.1.2 (replace with the latest version)
+In the world of Flutter development, where cross-platform consistency is paramount,
+platform_widgets emerges as a valuable tool. 
+This package offers a collection of widgets that seamlessly adapt to the specific platform, ensuring a native-like experience on both iOS and Android devices.
 
-2. Import the package: In your Dart code, import the necessary widget:
-import 'package:platform_widgets/platform_widgets.dart';
 
-PlatformListTile: A customizable list tile that automatically renders as a ListTile on Android and a CupertinoListTile on iOS.
+## Key Features
+
+PlatformListTile: A versatile list tile that automatically renders as either a ListTile on Android or a CupertinoListTile on iOS.
+
 PlatformSlider: A slider widget that intelligently switches between Slider and CupertinoSlider based on the platform.
+
+PlatformButton: Renders as a TextButton on Android and a CupertinoButton on iOS, ensuring a native-like appearance.
+
+PlatformCheckbox: Renders as a Checkbox on Android and a CupertinoCheckbox on iOS, ensuring a native-like appearance.
+
+PlatformRadio :  Renders as a Radio on Android and a CupertinoRadio on iOS,ensuring a native-like appearance.
+
+PlatformSwitch:  Renders as a Switch on Android and a CupertinoSwitch on iOS, ensuring a native-like appearance.
+
 
 ## Getting started
 
 Package that can use platform specific widgets.
+
+1. Install the package: Add the following line to your pubspec.yaml file:
+   dependencies:  platform_widgets
+
+2. Import the package: In your Dart code, import the necessary widget:
+   import 'package:platform_widgets/platform_widgets.dart';
 
 ## Usage
 
 TODO: 
 View `/example` folder.
 
+## PlatformButton
 ```
-PlatformButton(onPressed: (){}, child: Text('Hello')),
+PlatformButton(
+  child: Text('Press me'),
+  onPressed: () {
+    // Handle button press
+  },
+  color: Colors.blue,
+  textColor: Colors.white,
+  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+);
 
-PlatformCheckbox(value: true, onChanged: (val){}),
-
-PlatformSwitch(value: true, onChanged: (val){})
 ```
+
+
+## PlatformCheckbox
+```
+PlatformCheckbox(
+  value: _isChecked,
+  onChanged: (value) {
+    setState(() {
+      _isChecked = value!;
+    });
+  },
+  activeColor: Colors.blue,
+  checkColor: Colors.white,
+);
+
+```
+
+
+## PlatformListTile
+```
+PlatformListTile(
+  leading: Icon(Icons.settings),
+  title: Text('Settings'),
+  subtitle: Text('Configure your preferences'),
+  trailing: Icon(Icons.chevron_right),
+  onTap: () {
+    // Handle tile tap
+  },
+  tileColor: Colors.grey[200],
+  textColor: Colors.black,
+);
+
+```
+
+## PlatformRadio
+```
+PlatformRadio(
+  value: _selectedValue,
+  groupValue: _groupValue,
+  onChanged: (value) {
+    setState(() {
+      _groupValue = value!;
+    });
+  },
+  activeColor: Colors.blue,
+  checkColor: Colors.white,
+);
+
+```
+
+## PlatformSlider
+```
+PlatformSlider(
+  value: 50.0,
+  min: 0.0,
+  max: 100.0,
+  divisions: 10,
+  onChanged: (value) {
+    // Handle value changes
+  },
+  onChangedEnd: (value) {
+    // Handle the end of dragging
+  },
+  activeColor: Colors.blue,
+  inactiveColor: Colors.grey,
+  thumbColor: Colors.white,
+);
+```
+
+## PlatformSwitch
+```
+PlatformSwitch(
+  value: _isSwitchOn,
+  onChanged: (value) {
+    setState(() {
+      _isSwitchOn = value;
+    });
+  },
+  activeColor: Colors.green,
+  inactiveColor: Colors.grey,
+);
+```
+
+## Benefits
+
+Consistent User Experience: By automatically adapting to the platform's design guidelines, platform_widgets helps you deliver a more cohesive and familiar user experience across devices.
+Simplified Development: No longer do you need to write separate code paths for iOS and Android. With platform_widgets, you can maintain a single codebase while ensuring platform-specific styling.
+Enhanced Visual Appeal: The widgets in this package are meticulously designed to match the native look and feel of each platform, providing a polished and professional appearance.
 
 ## Additional information
 
