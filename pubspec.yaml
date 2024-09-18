@@ -1,7 +1,7 @@
-name: platform_widgets
+name: cross_platform_widgets
 description: "Package that can use platform specific widgets."
-version: 0.0.1
-homepage:
+version: 0.1.2
+homepage: https://github.com/dharmik117/platform_widgtes
 
 environment:
   sdk: ^3.5.0

@@ -14,7 +14,7 @@ class PlatformSwitch extends StatelessWidget {
   final Color? thumbColor; // New thumb color property for both platforms
 
   const PlatformSwitch({
-    Key? key,
+    super.key,
     required this.value,
     required this.onChanged,
     this.activeColor,
@@ -24,32 +24,16 @@ class PlatformSwitch extends StatelessWidget {
     this.cupertinoActiveColor,
     this.cupertinoTrackColor,
     this.thumbColor,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     if (Platform.isIOS) {
-      return Stack(
-        alignment: Alignment.center,
-        children: [
-          CupertinoSwitch(
-            value: value,
-            onChanged: onChanged,
-            activeColor: cupertinoActiveColor ?? CupertinoColors.activeGreen,
-            trackColor: cupertinoTrackColor ?? CupertinoColors.systemGrey,
-          ),
-          Positioned(
-            left: value ? 16 : 0, // Thumb position based on switch state
-            child: Container(
-              width: 28.0,
-              height: 28.0,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: thumbColor ?? CupertinoColors.white,
-              ),
-            ),
-          ),
-        ],
+      return CupertinoSwitch(
+        value: value,
+        onChanged: onChanged,
+        activeColor: cupertinoActiveColor ?? CupertinoColors.activeGreen,
+        trackColor: cupertinoTrackColor ?? CupertinoColors.systemGrey,
       );
     } else {
       return Switch(

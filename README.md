@@ -11,29 +11,45 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/to/develop-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+TODO: Platform Widgets
+A Flutter package for adaptive UI components.
+
+
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+1. Install the package: Add the following line to your pubspec.yaml file:
+dependencies:  platform_widgets: ^0.1.2 (replace with the latest version)
+
+2. Import the package: In your Dart code, import the necessary widget:
+import 'package:platform_widgets/platform_widgets.dart';
+
+PlatformListTile: A customizable list tile that automatically renders as a ListTile on Android and a CupertinoListTile on iOS.
+PlatformSlider: A slider widget that intelligently switches between Slider and CupertinoSlider based on the platform.
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Package that can use platform specific widgets.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+TODO: 
+View `/example` folder.
 
-```dart
-const like = 'sample';
+```
+PlatformButton(onPressed: (){}, child: Text('Hello')),
+
+PlatformCheckbox(value: true, onChanged: (val){}),
+
+PlatformSwitch(value: true, onChanged: (val){})
 ```
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+
+Contributing: We welcome your contributions! Feel free to submit bug reports, feature requests, or pull requests to improve this package.
+Issues: Please report any issues you encounter using the GitHub issue tracker: https://github.com/dharmik117/platform_widgtes.
+License: This package is released under the MIT License (see LICENSE file for details).
+Example:
+
+A more elaborate example showcasing both widgets can be found in the /example directory of this package.
